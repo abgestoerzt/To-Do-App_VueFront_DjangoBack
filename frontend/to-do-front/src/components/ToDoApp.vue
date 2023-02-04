@@ -6,8 +6,26 @@
 
 <script>
 
+import axios from 'axios';
+
 export default {
   name: 'ToDoApp',
+
+  mounted () {
+    axios.get('http://127.0.0.1:8000/todo/', {
+      headers: {
+        Authorization: 'Basic ' + ('admin' + ':' + '123')
+      }
+    }
+      )
+      .then(response => {
+        this.response = response.data
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
  
 }
 </script>
