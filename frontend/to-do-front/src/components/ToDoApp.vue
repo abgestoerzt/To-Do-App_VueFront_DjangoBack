@@ -1,6 +1,22 @@
 <template>
   <div class="hello">
     <h1>To-Do-App</h1>
+
+
+  <div>
+
+<form @submit.prevent="submitForm">
+  <h3>What should be done?</h3>
+  <input type="text" v-model="to_do_name">
+  <button type="submit">Add To List!</button>
+
+
+</form>
+
+</div>
+
+
+
     <div>
     <ul>
       <li v-for="item in response" :key="item.id">{{ item.name }} {{ item.id }}
@@ -13,16 +29,6 @@
 
 
 
-  <div>
-
-    <form @submit.prevent="submitForm">
-      <input type="text" v-model="to_do_name">
-      <button type="submit">Submit</button>
-
-
-    </form>
-   
-  </div>
 
 
   </div>
