@@ -5,4 +5,4 @@ from rest_framework import serializers
 class ToDoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ToDo
-        fields = ['name', 'deadline', 'done']
+        fields = ['id', 'name', 'deadline', 'done']
