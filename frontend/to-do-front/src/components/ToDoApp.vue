@@ -12,11 +12,8 @@ export default {
   name: 'ToDoApp',
 
   mounted () {
-    axios.get('http://127.0.0.1:8000/todo/', {
-      headers: {
-        Authorization: 'Basic ' + ('admin' + ':' + '123')
-      }
-    }
+    axios.get('http://127.0.0.1:8000/todo/'
+   
       )
       .then(response => {
         this.response = response.data
